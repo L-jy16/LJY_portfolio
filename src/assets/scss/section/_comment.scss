@@ -1,0 +1,100 @@
+.comment {
+    width: 24vw;
+    height: 24vw;
+    background-color: #cccccc00;
+    border: 1px solid var(--font-color);
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mainEn-font);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    // position: relative;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--font-color);
+        color: var(--white);
+    }
+
+    &.active {}
+
+    &.left {
+        position: absolute;
+        left: 10%;
+        top: 40%;
+    }
+
+    &.right {}
+
+    &.top_l {}
+
+    &.top_r {}
+
+    &.bottom {}
+}
+
+.comment_input {
+    display: none;
+
+    &.active {
+        width: 24vw;
+        height: 24vw;
+        border: 1px solid var(--font-color);
+        background-color: var(--font-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        form {
+            border: none;
+            width: 100%;
+
+            fieldset {
+                border: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                input {
+                    width: 50%;
+                    border: 0;
+                    background: transparent;
+                    border: 1px solid var(--white);
+                    padding: 5px 10px;
+                    margin-bottom: 5px;
+                    font-family: var(--mainKo-font);
+                    color: var(--white);
+                    font-size: 1.1vw;
+
+                    &::placeholder {
+                        color: #D6D6D6;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                }
+
+                button {
+                    display: block;
+                    color: var(--white);
+                    background-color: var(--black800);
+                    padding: 0.3vw 0.6vw;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &.left {
+            position: absolute;
+            left: 50%;
+            top: 40%;
+        }
+    }
+}
