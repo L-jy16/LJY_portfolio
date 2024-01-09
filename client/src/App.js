@@ -19,6 +19,7 @@ import Mouse from './components/work/Mouse'
 import Movie from './components/work/Movie'
 import Slide from './components/work/Slide'
 import AddPlus from './components/work/AddPlus'
+import Portfolio from './components/work/Portfolio'
 
 const App = () => {
   return (
@@ -39,6 +40,7 @@ const App = () => {
           <Route path='/movie' element={<Movie />}></Route>
           <Route path='/slide' element={<Slide />}></Route>
           <Route path='/addplus' element={<AddPlus />}></Route>
+          <Route path='/portfolio' element={<Portfolio />}></Route>
         </Routes>
       </Main>
     </div>

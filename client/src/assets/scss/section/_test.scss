@@ -74,43 +74,9 @@
             }
         }
 
-        .img {
+        img {
             position: absolute;
             cursor: pointer;
-
-            span {
-                display: none;
-            }
-
-            &:hover {
-
-                &.i01,
-                &.i02,
-                &.i03,
-                &.i04,
-                &.i05,
-                &.i06,
-                &.i07,
-                &.i08,
-                &.i09,
-                &.i10,
-                &.i11,
-                &.i12 {
-                    filter: brightness(1);
-                }
-
-
-                span {
-                    display: block;
-                    font-family: var(--mainEn-font);
-                    position: absolute;
-                    left: 50%;
-                    bottom: 5%;
-                    transform: translateX(-50%);
-                    font-size: 1.3rem;
-                    text-transform: uppercase;
-                }
-            }
 
             &.i01 {
                 width: 200px;
@@ -120,11 +86,6 @@
                 left: 5%;
                 top: 20%;
                 filter: brightness(0.7);
-                background-image: url(../../image/i1-min.png);
-                background-position: center;
-                background-size: cover;
-
-
             }
 
             &.i06 {
@@ -135,9 +96,6 @@
                 left: 2%;
                 top: 60%;
                 filter: brightness(0.7);
-                background-image: url(../../image/i6-min.png);
-                background-position: center;
-                background-size: cover;
             }
 
             &.i08 {
@@ -148,9 +106,6 @@
                 left: 35%;
                 top: 75%;
                 filter: brightness(0.7);
-                background-image: url(../../image/i8-min.png);
-                background-position: center;
-                background-size: cover;
             }
 
             &.i10 {
@@ -161,9 +116,6 @@
                 left: 55%;
                 top: 70%;
                 filter: brightness(0.7);
-                background-image: url(../../image/i10-min.png);
-                background-position: center;
-                background-size: cover;
             }
 
 
@@ -176,9 +128,6 @@
                 left: 20%;
                 top: 0%;
                 filter: brightness(0.6);
-                background-image: url(../../image/i2-min.png);
-                background-position: center;
-                background-size: cover;
             }
 
             &.i04 {
@@ -189,9 +138,6 @@
                 left: 57%;
                 top: 18%;
                 filter: brightness(0.6);
-                background-image: url(../../image/i4-min.png);
-                background-position: center;
-                background-size: cover;
             }
 
             &.i12 {
@@ -202,9 +148,6 @@
                 left: 85%;
                 top: 75%;
                 filter: brightness(0.6);
-                background-image: url(../../image/i12-min.png);
-                background-position: center;
-                background-size: cover;
             }
 
 
@@ -216,9 +159,6 @@
                 left: 20%;
                 top: 50%;
                 filter: brightness(0.6);
-                background-image: url(../../image/i7-min.png);
-                background-position: center;
-                background-size: cover;
             }
 
             &.i03 {
@@ -229,9 +169,6 @@
                 left: 40%;
                 top: 10%;
                 filter: brightness(0.5);
-                background-image: url(../../image/min.png);
-                background-position: center;
-                background-size: cover;
             }
 
             &.i05 {
@@ -242,9 +179,6 @@
                 left: 74%;
                 top: 0%;
                 filter: brightness(0.5);
-                background-image: url(../../image/i5-min.png);
-                background-position: center;
-                background-size: cover;
             }
 
             &.i09 {
@@ -254,10 +188,8 @@
                 object-fit: cover;
                 left: 90%;
                 top: 10%;
+
                 filter: brightness(0.5);
-                background-image: url(../../image/i9-min.png);
-                background-position: center;
-                background-size: cover;
             }
 
 
@@ -268,10 +200,8 @@
                 object-fit: cover;
                 left: 72%;
                 top: 50%;
+
                 filter: brightness(0.5);
-                background-image: url(../../image/i11-min.png);
-                background-position: center;
-                background-size: cover;
             }
 
 
@@ -283,7 +213,12 @@
 
 @media (max-width: 800px) {
     #active__wrap {
+
         #active__title {
+            // top: 10%;
+            // transform: translate(-50%, 0%);
+            // text-align: center;
+
             h2 {
                 font-size: 5vw;
             }
@@ -308,13 +243,7 @@
                 font-size: 3vw;
             }
 
-            .img {
-                &:hover {
-                    span {
-                        font-size: 3vw;
-                    }
-                }
-
+            img {
                 &.i01 {
                     width: 25vw;
                     height: 25vh;

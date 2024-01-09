@@ -1,8 +1,13 @@
 import React from 'react'
+import RepleList from './RepleList'
+import RepleWrite from './RepleWrite'
 
-const RepleAreas = () => {
+const RepleAreas = ({ position }) => {
   return (
-    <div>RepleAreas</div>
+    <>
+      <RepleList position={position} />
+      <RepleWrite position={position} />
+    </>
   )
 }
 

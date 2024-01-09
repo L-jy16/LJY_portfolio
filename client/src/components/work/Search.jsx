@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { gsap } from "gsap";
+import RepleAreas from '../reple/RepleAreas';
 
 const Search = () => {
+    const navigate = useNavigate();
+
     // 화면 전환 효과
     useEffect(() => {
 
@@ -23,9 +26,13 @@ const Search = () => {
         })
     }, [])
 
+    const mainHandle = () => {
+        navigate("/home")
+    }
+
     return (
         <div className='work_Detail'>
-            <div className="work__title">
+            <div className="work__title" onClick={() => mainHandle()}>
                 <h2>portfolio</h2>
                 <span>lee ji young</span>
             </div>
@@ -57,7 +64,14 @@ const Search = () => {
                 </div>
             </div>
             {/* work_footer */}
-            {/* work_back_button */}
+
+            {/* comment */}
+            <RepleAreas position={"right"} />
+
+            {/* mobile
+            <div className="reple_btn">
+                <button>comment</button>
+            </div> */}
         </div>
     )
 }

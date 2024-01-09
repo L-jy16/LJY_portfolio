@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import img01 from "../assets/image/i1-min.png"
 import img02 from "../assets/image/i2-min.png"
-import img03 from "../assets/image/i3-min.png"
+import img03 from "../assets/image/min.png"
 import img04 from "../assets/image/i4-min.png"
 import img05 from "../assets/image/i5-min.png"
 import img06 from "../assets/image/i6-min.png"
@@ -125,7 +125,7 @@ const Home2 = () => {
         hideImages.splice(hideImages.indexOf(move), 1);
         console.log(hideImages)
         hideImages.sort(() => Math.random() - 0.5);
-        
+
         switch (move) {
             case "i01":
                 tl.to(`.${hideImages[0]},.${hideImages[1]},.${hideImages[2]},.${hideImages[11]}`, { opacity: 0, duration: 0.3 })
@@ -221,82 +221,118 @@ const Home2 = () => {
         <div id='active__wrap' onMouseMove={(e) => manageMouseMove(e)} onMouseDown={() => clickHandle()} onMouseUp={() => clickHandle()} >
 
             <div className="imgs">
-                <img
+                <div className="img i01"
                     ref={plane1} src={img01}
                     alt="image01"
-                    className='i01'
                     onClick={() => moveHandle("/search", "i01")}
-                    />
-                <img
+                >
+                <span className="work_name">
+                    search
+                </span>
+                </div>
+                <div className="img i06"
                     ref={plane6} src={img06}
                     alt="image06"
-                    className='i06'
                     onClick={() => moveHandle("/youtube", "i06")}
-                    />
-                <img
+                >
+                <span className="work_name">
+                    youtube
+                </span>
+                </div>
+                <div className="img i08"                
                     ref={plane8} src={img08}
                     alt="image08"
-                    className='i08'
                     onClick={() => moveHandle("/myuduck", "i08")}
-                    />
-                <img
+                >
+                <span className="work_name">
+                    myuduck
+                </span>
+                </div>
+                <div className="img i10"
                     ref={plane10} src={img10}
                     alt="image10"
-                    className='i10'
                     onClick={() => moveHandle("/movie", "i10")}
-                    />
+                >
+                <span className="work_name">
+                    movie
+                </span>
+                </div>
 
 
-                <img
+                <div className="img i02"
                     ref={plane2} src={img02}
                     alt="image02"
-                    className='i02'
                     onClick={() => moveHandle("/skill", "i02")}
-                    />
-                <img
+                >
+                <span className="work_name">
+                    skill
+                </span>
+                </div>
+                <div className="img i04"
                     ref={plane4} src={img04}
                     alt="image04"
-                    className='i04'
                     onClick={() => moveHandle("/content", "i04")}
-                    />
-                <img
+                >
+                <span className="work_name">
+                    content
+                </span>
+                </div>
+                <div className="img i07"
                     ref={plane7} src={img07}
                     alt="image07"
-                    className='i07'
                     onClick={() => moveHandle("/gsap", "i07")}
-                    />
-                <img
+                >
+                <span className="work_name">
+                    gsap
+                </span>
+                </div>
+                <div className="img i12"
                     ref={plane12} src={img12}
                     alt="image12"
-                    className='i12'
-                    onClick={() => moveHandle("/addplus", "i12")}
-                    />
+                    onClick={() => moveHandle("/portfolio", "i12")}
+                >
+                <span className="work_name">
+                    portfolio
+                </span>
+                </div>
 
 
-                <img
+                <div className="img i03"
                     ref={plane3} src={img03}
                     alt="image03"
-                    className='i03'
                     onClick={() => moveHandle("/aboutme", "i03")}
-                    />
-                <img
+                >
+                <span className="work_name">
+                    aboutme
+                </span>
+                </div>
+                <div className="img i05"
                     ref={plane5} src={img05}
                     alt="image05"
-                    className='i05'
                     onClick={() => moveHandle("/blog", "i05")}
-                    />
-                <img
+                >
+                <span className="work_name">
+                    blog
+                </span>
+                </div>
+                <div className="img i11"
                     ref={plane11} src={img11}
                     alt="image11"
-                    className='i11'
                     onClick={() => moveHandle("/slide", "i11")}
-                    />
-                <img
+                >
+                <span className="work_name">
+                    slide
+                </span>
+                </div>
+                <div className="img i09"
                     ref={plane9} src={img09}
                     alt="image9"
-                    className='i09'
                     onClick={() => moveHandle("/mouse", "i09")}
-                    />
+                >
+                <span className="work_name">
+                    mouse
+                </span>
+                </div>
 
                 <div id="back_button" onClick={() => BackHandle()}>
                     <span className="BackButton">back</span>

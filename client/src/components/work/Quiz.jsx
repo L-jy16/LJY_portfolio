@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { gsap } from "gsap";
+import RepleAreas from '../reple/RepleAreas';
 
 const Quiz = () => {
+    const navigate = useNavigate();
 
     // 화면 전환 효과
     useEffect(() => {
@@ -24,16 +26,20 @@ const Quiz = () => {
         })
     }, [])
 
+    const mainHandle = () => {
+        navigate("/home")
+    }
+
     return (
         <div className='work_Detail'>
-            <div className="work__title">
+            <div className="work__title" onClick={() => mainHandle()}>
                 <h2>portfolio</h2>
                 <span>lee ji young</span>
             </div>
             {/* work__title */}
 
-            <div className="work_center top_r">
-                <span className='center_text split'>add-plus <p>site</p></span>
+            <div className="work_center right">
+                <span className='center_text'>add-plus <p>site</p></span>
                 <div className="work_img_wrap quiz">
                 </div>
                 <div className="desc">
@@ -58,6 +64,9 @@ const Quiz = () => {
                 </div>
             </div>
             {/* work_footer */}
+
+            {/* comment */}
+            <RepleAreas position={"right"} />
         </div>
     )
 }

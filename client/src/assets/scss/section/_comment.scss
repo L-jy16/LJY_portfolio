@@ -1,40 +1,65 @@
-.comment {
-    width: 24vw;
-    height: 24vw;
-    background-color: #cccccc00;
-    border: 1px solid var(--font-color);
+.comment_wrap {
+    position: absolute;
     border-radius: 50%;
-    backdrop-filter: blur(5px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--mainEn-font);
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    // position: relative;
     cursor: pointer;
 
-    &:hover {
-        background-color: var(--font-color);
-        color: var(--white);
-    }
-
-    &.active {}
-
     &.left {
-        position: absolute;
-        left: 10%;
+        left: 18%;
         top: 40%;
     }
 
-    &.right {}
+    &.right {
+        right: 18%;
+        top: 40%;
+    }
 
-}
+    &:hover {
+        .comment {
+            background-color: var(--font-color);
+            color: var(--white);
+            transform: rotateY(180deg);
+        }
 
-.comment_input {
-    display: none;
+        .comment_back {
+            transform: rotateY(0);
+        }
+    }
 
     &.active {
+        .comment {
+            background-color: var(--font-color);
+            color: var(--white);
+            transform: rotateY(180deg);
+        }
+
+        .comment_back {
+            transform: rotateY(0);
+        }
+    }
+
+    .comment {
+        width: 24vw;
+        height: 24vw;
+        background-color: #cccccc00;
+        border: 1px solid var(--font-color);
+        border-radius: 50%;
+        backdrop-filter: blur(5px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--mainEn-font);
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        transition: transform 1s;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+
+    }
+
+    .comment_back {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 24vw;
         height: 24vw;
         border: 1px solid var(--font-color);
@@ -43,6 +68,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: transform 1s;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        transform: rotateY(-180deg);
+
 
         form {
             border: none;
@@ -62,7 +92,7 @@
                     border: 1px solid var(--white);
                     padding: 5px 10px;
                     margin-bottom: 5px;
-                    font-family: var(--mainKo-font);
+                    font-family: var(--mainSub-font3);
                     color: var(--white);
                     font-size: 1.1vw;
 
@@ -85,30 +115,200 @@
                 }
             }
         }
+    }
+}
 
-        &.left {
-            position: absolute;
-            left: 50%;
-            top: 40%;
+.reple_list {
+    position: fixed;
+    z-index: 1000;
+    padding: 1vw;
+    width: 18%;
+
+    &.left {
+        top: 0;
+        left: 0;
+    }
+
+    &.right {
+        top: 0;
+        right: 0;
+        text-align: right;
+    }
+
+    .reple {
+        display: inline-block;
+        background-color: #cccccc00;
+        border: 1px solid #DC5B37;
+        border-radius: 5px;
+        backdrop-filter: blur(5px);
+        padding: 0.5vw 1vw;
+        font-family: var(--mainKo-font);
+        margin-bottom: 1vw;
+        font-weight: 400;
+        line-height: 1.5;
+        word-break: keep-all;
+
+        span {}
+
+        .user_info {
+            opacity: 0.7;
+            font-size: 0.9vw;
+
+            span {
+                margin-right: 2px;
+                display: block;
+            }
+
+            em {
+                margin-right: 10px;
+            }
+
+            .modi {
+                margin-right: 2px;
+                background-color: #00000000;
+                color: var(--font-color);
+                cursor: pointer;
+                font-size: 0.9vw;
+
+                &:hover {
+                    color: var(--white);
+                }
+            }
+
+            .del {
+                margin-right: 2px;
+                background-color: #00000000;
+                color: var(--font-color);
+                cursor: pointer;
+                font-size: 0.9vw;
+
+                &:hover {
+                    color: var(--white);
+                }
+            }
         }
     }
 }
 
-.reple {
-    position: fixed;
-    z-index: 1000;
-    background-color: #cccccc00;
-    border: 1px solid #DC5B37;
-    border-radius: 5px;
-    backdrop-filter: blur(5px);
-    padding: 6px 10px;
-    font-family: var(--mainKo-font);
+@media (max-width: 1400px) {
+    .comment_wrap {
+        &.left {
+            left: 23%;
+            top: 40%;
+        }
 
-    left: 1vw;
-    top: 1vw;
+        &.right {
+            right: 23%;
+            top: 40%;
+        }
 
-    span {
-        opacity: 0.7;
-        font-size: 14px;
+        .comment {
+            width: 28vw;
+            height: 28vw;
+            font-size: 2vw;
+        }
+
+        .comment_back {
+            width: 28vw;
+            height: 28vw;
+            form {
+
+                fieldset {
+
+                    input {}
+
+                    button {}
+                }
+            }
+        }
+    }
+
+    .reple_list {
+        width: 25%;
+        .reple {
+            span {}
+
+            .user_info {
+                font-size: 1vw;
+                span {}
+
+                em {}
+
+                .modi {
+                    font-size: 1vw;
+                }
+
+                .del {
+                    font-size: 1vw;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .comment_wrap {
+        &.left {
+            left: auto;
+            top: 33%;
+            right: 5%;
+        }
+
+        &.right {
+            right: auto;
+            top: 33%;
+            left: 5%;
+        }
+
+        .comment {
+            width: 40vw;
+            height: 40vw;
+            font-size: 2vw;
+        }
+
+        .comment_back {
+            width: 40vw;
+            height: 40vw;
+            form {
+
+                fieldset {
+
+                    input {
+                        width: 70%;
+                        padding: 1vw;
+                        font-size: 2vw;
+                        font-size: 2vw;
+                    }
+
+                    button {
+                        font-size: 2vw;
+                        padding: 1vw 2vw;
+                    }
+                }
+            }
+        }
+    }
+
+    .reple_list {
+        width: 30%;
+        .reple {
+            font-size: 1.8vw;
+            span {}
+
+            .user_info {
+                font-size: 1.5vw;
+                span {}
+
+                em {}
+
+                .modi {
+                    font-size: 1.5vw;
+                }
+
+                .del {
+                    font-size: 1.5vw;
+                }
+            }
+        }
     }
 }
