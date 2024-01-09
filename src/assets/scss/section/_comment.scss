@@ -29,11 +29,6 @@
 
     &.right {}
 
-    &.top_l {}
-
-    &.top_r {}
-
-    &.bottom {}
 }
 
 .comment_input {
@@ -96,5 +91,24 @@
             left: 50%;
             top: 40%;
         }
+    }
+}
+
+.reple {
+    position: fixed;
+    z-index: 1000;
+    background-color: #cccccc00;
+    border: 1px solid #DC5B37;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    padding: 6px 10px;
+    font-family: var(--mainKo-font);
+
+    left: 1vw;
+    top: 1vw;
+
+    span {
+        opacity: 0.7;
+        font-size: 14px;
     }
 }

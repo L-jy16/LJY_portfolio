@@ -47,7 +47,7 @@ const Youtube = () => {
             {/* work_center */}
 
 
-            {/* reple_write 정보 */}
+            {/* reple_write 내용 */}
             <div className="work_footer">
                 <div className="link_button">
                     <Link to='/home' className="work_back_button">
@@ -108,6 +108,12 @@ const Youtube = () => {
                 </form>
             </div>
             {/* comment */}
+
+            {/* reple_list 내용 */}
+            <div className="reple">
+                <p>댓글 내용 댓글 내용 댓글 내용</p>
+                <span>지죤 <em>2023.10.30</em><a>수정</a><a>삭제</a></span>
+            </div>
         </div>
     )
 }
