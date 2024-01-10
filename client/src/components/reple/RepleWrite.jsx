@@ -1,7 +1,6 @@
 import React from 'react'
 
-const RepleWrite = ({ position }) => {
-    console.log(position)
+const RepleWrite = ({ position, submitHandler, reple, setReple, nickName, setNickName, password, setPassword }) => {
     return (
         <div className={`comment_wrap ${position}`}>
             <div className="comment ">
@@ -21,6 +20,8 @@ const RepleWrite = ({ position }) => {
                             className="comment__nickname"
                             placeholder="Nickame"
                             autoComplete="username"
+                            value={nickName}
+                            onChange={(e) => { setNickName(e.currentTarget.value) }}
                             required
                         />
                         <label htmlFor="commentPass" className="blind">
@@ -33,6 +34,8 @@ const RepleWrite = ({ position }) => {
                             className="comment__password"
                             placeholder="Password"
                             autoComplete="current-password"
+                            value={password}
+                            onChange={(e) => { setPassword(e.currentTarget.value) }}
                             required
                         />
                         <label htmlFor="commentWrite" className="blind">
@@ -44,9 +47,11 @@ const RepleWrite = ({ position }) => {
                             name="commentWrite"
                             className="comment__detail"
                             placeholder="100글자 이내로 적어주세요."
+                            value={reple}
+                            onChange={(e) => { setReple(e.currentTarget.value) }}
                             required
                         />
-                        <button className="comment_btn">댓글쓰기</button>
+                        <button className="comment_btn" onClick={(e) => { submitHandler(e) }}>댓글쓰기</button>
                     </fieldset>
                 </form>
             </div>

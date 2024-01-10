@@ -42,6 +42,56 @@
     }
 
     .work_center {
+        &.about {
+            width: 80vw;
+
+            .center_text {
+                display: block;
+                text-transform: uppercase;
+                font-family: var(--mainEn-font);
+                font-size: 10vw;
+                line-height: 1;
+                text-align: right;
+                margin-bottom: -3vw;
+                margin-right: -4vw;
+
+                p {
+                    font-weight: lighter;
+                    display: inline-block;
+                    line-height: 1;
+                }
+            }
+
+            .work_img_wrap {
+                width: 100%;
+                height: 45vh;
+                position: relative;
+                z-index: -1;
+                background-image: url(../../image/min.png);
+                background-position: center;
+                background-size: contain;
+            }
+
+            .desc {
+                width: 30%;
+                font-family: var(--mainKo-font);
+                font-size: 1vw;
+                margin-left: auto;
+                margin-right: -15vw;
+                margin-top: -4vw;
+
+
+                span {
+                    backdrop-filter: blur(5px);
+                    width: 100%;
+                    display: inline-block;
+                    text-align: left;
+                    font-size: 1.13rem;
+                }
+
+            }
+        }
+
         &.left {
             .center_text {
                 display: block;
@@ -77,12 +127,6 @@
                     background-image: url(../../image/i9-min.png);
                     background-position: center;
                     background-size: cover;
-                }
-
-                &.aboutme {
-                    background-image: url(../../image/min.png);
-                    background-position: center;
-                    background-size: contain;
                 }
 
                 &.slide {
@@ -367,6 +411,25 @@
         }
 
         .work_center {
+            &.about {
+                .center_text {
+                    font-size: 11vw;
+                }
+
+
+                .work_img_wrap {
+                    height: 50vh;
+                }
+
+                .desc {
+                    width: 45%;
+
+                    span {
+                        font-size: 1.8vw;
+                    }
+
+                }
+            }
 
             &.left {
                 .center_text {
@@ -384,7 +447,7 @@
                     margin-right: 5vw;
 
                     span {
-                        font-size: 1.4rem;
+                        font-size: 1.8vw;
                     }
 
                 }
@@ -425,7 +488,7 @@
 
                     span {
                         width: 45%;
-                        font-size: 1.4rem;
+                        font-size: 1.8vw;
                     }
                 }
             }
@@ -470,143 +533,271 @@
     }
 }
 
+@media (max-width: 800px) {
+    .work_Detail {
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+
+        .work__title {
+            top: 3vh;
+
+            h2 {
+                font-size: 5vw;
+            }
+
+            span {
+                font-size: 2.7vw;
+            }
+        }
+
+        .work_center {
+            width: 100%;
+            margin-top: 5vh;
+
+            &.about,
+            &.left,
+            &.right {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-around;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                .center_text {
+                    margin: 0;
+                    text-align: center;
+                }
+
+                .work_img_wrap {
+                    width: 100%;
+                    height: 50vh;
+
+                    &.aboutme {
+                        background-image: url(../../image/min.png);
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                    }
+
+                }
+
+                .content_link {
+                    width: 100%;
+                    text-align: center;
+                    margin: 0;
+                    padding: 10px;
+
+                    .email,
+                    .git {
+                        width: 100%;
+
+                        span {
+                            font-size: 5vw;
+                        }
+
+                        a {
+                            font-size: 5vw;
+                        }
+                    }
+                }
+
+                .desc {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 2.8vw;
+                    margin-top: 0vw;
+                    margin: 0;
+
+                    span {
+                        width: 100%;
+                        margin: 0;
+                        font-size: 3vw;
+                    }
+
+
+
+                }
+            }
+
+            &.skill {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                .center_text {
+                    text-align: center;
+                    font-size: 11vw;
+                    margin: 0;
+                }
+
+                .work_img_wrap {
+                    width: 100%;
+                    height: 50vh;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    flex-direction: column;
+                    align-content: center;
+                    overflow: hidden;
+                }
+
+                .skill {
+                    width: 100%;
+                    margin-left: 0;
+                    margin-top: 0;
+                    height: 30%;
+
+                    ul {
+                        margin-top: 2vh;
+                        margin-right: 5%;
+                        width: 100%;
+
+                        li {
+                            width: 23%;
+
+                            span {
+                                font-size: 3.5vw;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+
+        }
+
+        .work_footer {
+
+            .work_back_button {
+                span {
+                    font-size: 4vw;
+                }
+            }
+
+            .work_btn {
+                a {
+                    font-size: 4vw;
+                }
+            }
+        }
+    }
+}
+
 // @media (max-width: 800px) {
 //     .work_Detail {
-//         align-items: center;
-//         align-content: center;
-//         justify-content: center;
+//         .mouse__cursor {}
 
 //         .work__title {
-//             top: 3vh;
-
 //             h2 {
-//                 font-size: 5vw;
+//                 font-size: 3vw;
 //             }
 
 //             span {
-//                 font-size: 2.7vw;
+//                 font-size: 1.5vw;
 //             }
 //         }
 
 //         .work_center {
-//             width: 100%;
-//             margin-top: 5vh;
 
-//             &.left,
-//             &.right {
-//                 width: 100%;
-//                 display: flex;
-//                 flex-wrap: wrap;
-//                 align-content: space-around;
-//                 justify-content: center;
-//                 align-items: center;
-//                 text-align: center;
-
+//             &.left {
 //                 .center_text {
-//                     margin: 0;
-//                     text-align: center;
+//                     font-size: 11vw;
+//                     margin-right: 15vw;
+//                     margin-bottom: -6vw;
 //                 }
 
-//                 .work_img_wrap {
-//                     width: 100%;
-//                     height: 50vh;
 
-//                     &.aboutme {
-//                         background-image: url(../../image/min.png);
-//                         background-position: center;
-//                         background-size: contain;
-//                         background-repeat: no-repeat;
+//                 .work_img_wrap {
+//                     height: 45vh;
+//                 }
+
+//                 .desc {
+//                     width: 60%;
+//                     margin-right: 5vw;
+//                     margin-top: 5vw;
+
+//                     span {
+//                         font-size: 2.5vw;
 //                     }
 
 //                 }
+//             }
+
+//             &.right {
+
+//                 .center_text {
+//                     font-size: 11vw;
+//                     width: 90vw;
+//                     margin-bottom: -6vw;
+
+//                     p {}
+//                 }
+
+
+//                 .work_img_wrap {
+//                     height: 45vh;
+//                 }
 
 //                 .content_link {
-//                     width: 100%;
-//                     text-align: center;
-//                     margin: 0;
-//                     padding: 10px;
+//                     margin-top: 5vw;
 
 //                     .email,
 //                     .git {
-//                         width: 100%;
+//                         width: 60%;
 
 //                         span {
-//                             font-size: 5vw;
+//                             font-size: 3vw;
 //                         }
 
 //                         a {
-//                             font-size: 5vw;
+//                             font-size: 3vw;
 //                         }
 //                     }
 //                 }
 
 //                 .desc {
-//                     width: 100%;
-//                     padding: 10px;
-//                     font-size: 2.8vw;
-//                     margin-top: 0vw;
-//                     margin: 0;
+//                     margin-left: 5vw;
+//                     margin-top: 5vw;
 
 //                     span {
-//                         width: 100%;
-//                         margin: 0;
-//                         font-size: 3vw;
+//                         width: 60%;
+//                         font-size: 2.5vw;
 //                     }
-
-
-
 //                 }
 //             }
 
 //             &.skill {
-//                 width: 100%;
-//                 display: flex;
-//                 flex-wrap: wrap;
-//                 align-content: center;
-//                 justify-content: center;
-//                 align-items: center;
-//                 text-align: center;
-
 //                 .center_text {
-//                     text-align: center;
 //                     font-size: 11vw;
-//                     margin: 0;
+//                     left: 20%;
 //                 }
 
 //                 .work_img_wrap {
-//                     width: 100%;
-//                     height: 50vh;
-//                     display: flex;
-//                     flex-wrap: nowrap;
-//                     flex-direction: column;
-//                     align-content: center;
-//                     overflow: hidden;
+//                     height: 60vh;
 //                 }
 
 //                 .skill {
 //                     width: 100%;
-//                     margin-left: 0;
-//                     margin-top: 0;
-//                     height: 30%;
+//                     margin-top: -35vw;
 
 //                     ul {
-//                         margin-top: 2vh;
-//                         margin-right: 5%;
-//                         width: 100%;
-
 //                         li {
-//                             width: 23%;
+//                             width: 49%;
 
 //                             span {
-//                                 font-size: 3.5vw;
+//                                 font-size: 3vw;
 //                             }
 //                         }
 //                     }
 //                 }
-
 //             }
-
-
 //         }
 
 //         .work_footer {
@@ -625,126 +816,3 @@
 //         }
 //     }
 // }
-
-@media (max-width: 800px) {
-    .work_Detail {
-        .mouse__cursor {}
-
-        .work__title {
-            h2 {
-                font-size: 3vw;
-            }
-
-            span {
-                font-size: 1.5vw;
-            }
-        }
-
-        .work_center {
-
-            &.left {
-                .center_text {
-                    font-size: 11vw;
-                    margin-right: 15vw;
-                    margin-bottom: -6vw;
-                }
-
-
-                .work_img_wrap {
-                    height: 45vh;
-                }
-
-                .desc {
-                    width: 60%;
-                    margin-right: 5vw;
-                    margin-top: 5vw;
-
-                    span {
-                        font-size: 2.5vw;
-                    }
-
-                }
-            }
-
-            &.right {
-
-                .center_text {
-                    font-size: 11vw;
-                    width: 90vw;
-                    margin-bottom: -6vw;
-                     p {}
-                }
-
-
-                .work_img_wrap {
-                    height: 45vh;
-                }
-
-                .content_link {
-                    margin-top: 5vw;
-                    .email,
-                    .git {
-                        width: 60%;
-
-                        span {
-                            font-size: 3vw;
-                        }
-
-                        a {
-                            font-size: 3vw;
-                        }
-                    }
-                }
-
-                .desc {
-                    margin-left: 5vw;
-                    margin-top: 5vw;
-                    span {
-                        width: 60%;
-                        font-size: 2.5vw;
-                    }
-                }
-            }
-
-            &.skill {
-                .center_text {
-                    font-size: 11vw;
-                    left: 20%;
-                }
-
-                .work_img_wrap {
-                    height: 60vh;
-                }
-
-                .skill {
-                    width: 100%;
-                    margin-top: -35vw;
-
-                    ul {
-                        li {
-                            width: 49%;
-
-                            span {
-                                font-size: 3vw;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .work_footer {
-
-            .work_back_button {
-                span {
-                    font-size: 4vw;
-                }
-            }
-
-            .work_btn {
-                a {
-                    font-size: 4vw;
-                }
-            }
-        }
-    }
-}

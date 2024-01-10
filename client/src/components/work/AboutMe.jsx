@@ -40,7 +40,7 @@ const AboutMe = () => {
             </div>
             {/* work__title */}
 
-            <div className="work_center left">
+            <div className="work_center about">
                 <span className='center_text'>about <p>me</p></span>
                 <div className="work_img_wrap aboutme">
                 </div>
@@ -54,13 +54,15 @@ const AboutMe = () => {
             </div>
             {/* work_center */}
 
-
-
             <div className="work_footer">
                 <div className="link_button">
                     <Link to='/home' className="work_back_button">
                         <span>Main site</span>
                     </Link>
+                </div>
+                <div className="work_btn">
+                    <Link to="mailto:lee.jiyoung492@gmail.com">Email</Link>
+                    <Link to="https://github.com/L-jy16">github</Link>
                 </div>
             </div>
             {/* work_footer */}

@@ -120,9 +120,9 @@
 
 .reple_list {
     position: fixed;
-    z-index: 1000;
     padding: 1vw;
-    width: 18%;
+    z-index: 50;
+
 
     &.left {
         top: 0;
@@ -147,6 +147,7 @@
         font-weight: 400;
         line-height: 1.5;
         word-break: keep-all;
+        max-width: 18vw;
 
         span {}
 
@@ -156,7 +157,7 @@
 
             span {
                 margin-right: 2px;
-                display: block;
+                // display: block;
             }
 
             em {
@@ -188,6 +189,70 @@
             }
         }
     }
+
+    .modal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #00000000;
+        // background-color: #fff;
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30%;
+            background-color: var(--main-bg);
+            padding: 2vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+            .close {
+                width: 100%;
+                text-align: right;
+            }
+
+            h2 {
+                font-size: 1.2vw;
+                margin-bottom: 2vw;
+            }
+
+            .password_input {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 80%;
+
+                input {
+                    width: 75%;
+                    border-radius: 5px;
+                    padding: 5px 10px;
+                }
+
+                button {
+                    width: 24%;
+                    padding: 0.5vw 1vw;
+                    color: var(--font-color);
+                    font-family: var(--mainEn-font);
+                    text-transform: uppercase;
+                    background-color: #00000000;
+                    font-size: 1vw;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: var(--white200);
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 1400px) {
@@ -211,6 +276,7 @@
         .comment_back {
             width: 28vw;
             height: 28vw;
+
             form {
 
                 fieldset {
@@ -224,12 +290,12 @@
     }
 
     .reple_list {
-        width: 25%;
         .reple {
             span {}
 
             .user_info {
                 font-size: 1vw;
+
                 span {}
 
                 em {}
@@ -241,6 +307,22 @@
                 .del {
                     font-size: 1vw;
                 }
+            }
+        }
+    }
+
+    .modal {
+
+        .modal-content {
+
+            .close {}
+
+            h2 {}
+
+            .password_input {
+                input {}
+
+                button {}
             }
         }
     }
@@ -269,6 +351,7 @@
         .comment_back {
             width: 40vw;
             height: 40vw;
+
             form {
 
                 fieldset {
@@ -290,13 +373,16 @@
     }
 
     .reple_list {
-        width: 30%;
+        width: 100%;
+
         .reple {
-            font-size: 1.8vw;
+            width: 30vw;
+
             span {}
 
             .user_info {
                 font-size: 1.5vw;
+
                 span {}
 
                 em {}
@@ -310,5 +396,32 @@
                 }
             }
         }
+
+        .modal {
+
+            .modal-content {
+                width: 50%;
+                padding: 3vw;
+
+                .close {}
+
+                h2 {
+                    font-size: 3vw;
+                    margin-bottom: 2vw;
+                }
+
+                .password_input {
+                    input {
+                        font-size: 2vw;
+                    }
+
+                    button {
+                        font-size: 2.5vw;
+                    }
+                }
+            }
+        }
     }
+
+
 }
