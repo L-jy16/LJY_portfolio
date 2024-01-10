@@ -92,7 +92,8 @@ const RepleContent = (props) => {
     // }, [])
 
     return (
-        <div className='reple_modal_wrap'>
+        <>
+        {/* // <div className='reple_modal_wrap'> */}
             <div className="reple">
                 {repleInput && editFlag ? (
                     <form className='editinput'>
@@ -144,7 +145,8 @@ const RepleContent = (props) => {
                     </div>
                 )
             }
-        </div>
+        {/* </div> */}
+        </>
     )
 }
 
