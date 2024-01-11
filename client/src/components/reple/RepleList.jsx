@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import RepleContent from './RepleContent'
 import axios from 'axios';
 
-const RepleList = ({ position, submitHandler }) => {
+const RepleList = ({ position }) => {
     const [repleList, setRepleList] = useState([]);
     const commentViewRef = useRef(null);
 
@@ -19,7 +19,7 @@ const RepleList = ({ position, submitHandler }) => {
 
     useEffect(() => {
         fetchRepleData();
-    }, [submitHandler]);
+    }, [repleList]);
 
     return (
         <div className={`reple_list ${position}`} ref={commentViewRef}>

@@ -1,6 +1,50 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useState } from 'react'
 
-const RepleWrite = ({ position, submitHandler, reple, setReple, nickName, setNickName, password, setPassword }) => {
+const RepleWrite = ({ position }) => {
+
+    const [reple, setReple] = useState("");
+    const [nickName, setNickName] = useState("");
+    const [password, setPassword] = useState("");
+
+
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+
+        if (!reple || !nickName || !password) {
+            return alert("모두 채워주세요.");
+        }
+
+        if (reple.length > 101) {
+            return alert("댓글을 100글자 이내로 적어주세요.")
+        }
+
+        let body = {
+            reple: reple,
+            nickName: nickName,
+            password: password,
+        }
+
+        axios.post("/api/reple/submit", body)
+            .then((response) => {
+                if (response.data.success) {
+                    alert("댓글 감사합니다 😊")
+                    console.log("Before reset:", reple, nickName, password);
+                    setReple("")
+                    setNickName("")
+                    setPassword("")
+                    console.log("After reset:", reple, nickName, password);
+                } else {
+                    alert("댓글이 작성되지 않았습니다.")
+                }
+            })
+            .catch((err) => {
+                console.log(err)
+                alert("댓글 실패")
+            })
+    }
+
     return (
         <div className={`comment_wrap ${position}`}>
             <div className="comment ">

@@ -175,9 +175,12 @@
             word-break: keep-all;
             max-width: 19%;
             color: #e2613d;
+            box-sizing: border-box;
+
 
             .reple_info {
                 width: 100%;
+                box-sizing: border-box;
             }
 
             .user_info {
@@ -241,7 +244,7 @@
                     cursor: pointer;
 
                     &:hover {
-                        color: var(--font-color);
+                        color: var(--white);
                     }
 
                 }
@@ -252,7 +255,7 @@
                     cursor: pointer;
 
                     &:hover {
-                        color: var(--font-color);
+                        color: var(--white);
                     }
                 }
             }
@@ -269,7 +272,7 @@
             background-color: #00000000;
             // background-color: #fff;
             z-index: 1000;
-            
+
 
             .modal-content {
                 position: absolute;
@@ -333,7 +336,7 @@
 @media (max-width: 1400px) {
     .reple {
         .comment_wrap {
-            
+
 
             &.left {
                 left: 25%;
@@ -536,8 +539,15 @@
                             }
 
                             button {
+                                margin-top: 2vw;
+                                background-color: var(--font-color);
                                 font-size: 2vw;
                                 padding: 1vw 2vw;
+
+                                &:hover {
+                                    background-color: var(--white);
+                                    color: var(--font-color);
+                                }
                             }
                         }
                     }
@@ -575,6 +585,7 @@
                     top: 15%;
                     left: 50%;
                     right: 50%;
+                    text-align: left;
                     transform: translateX(-50%);
                 }
 
@@ -600,12 +611,30 @@
                             font-size: 1.8vw;
                         }
                     }
+
+                    .editinput {
+                        width: 100%;
+
+                        .editText {
+                            font-size: 2vw;
+                        }
+
+                        .edit {
+                            padding: 0 2vw;
+                            font-size: 2vw;
+                        }
+
+                        .editdelete {
+                            font-size: 2vw;
+                        }
+                    }
                 }
             }
 
             .modal {
                 width: 100%;
                 height: 100%;
+
                 .modal-content {
                     top: 30%;
                     width: 80%;

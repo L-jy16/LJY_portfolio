@@ -23,9 +23,11 @@ const RepleContent = (props) => {
         setEditFlag(true);
     };
 
-    const deletebtn = () => {
+    const deletebtn = (e) => {
         setModalFlag(true);
         setEditFlag(false);
+        e.preventDefault()
+
     };
 
     const closeModal = () => {
@@ -34,7 +36,7 @@ const RepleContent = (props) => {
         setShowPasswordError(false); // 오류 메시지 초기화
     };
 
-    const submitAction = async () => {
+    const submitAction = () => {
         if (password === props.reple.password) {
             setModalFlag(false)
             setShowPasswordError(false);
@@ -66,7 +68,8 @@ const RepleContent = (props) => {
         }
     };
 
-    const modiHandler = () => {
+    const modiHandler = (e) => {
+        e.preventDefault();
         let body = {
             repleId: props.reple._id,
             reple: reple,
@@ -77,23 +80,18 @@ const RepleContent = (props) => {
             .then((response) => {
                 if (response.data.success) {
                     alert("댓글 수정이 성공하였습니다.")
+                    setRepleInput(false);
                 } else {
                     alert("댓글 수정이 실패하였습니다.")
                 }
-                // setRefreshFlag(true);
             })
             .catch((err) => {
                 console.log(err)
             })
     }
 
-    // useEffect(() => {
-    //     props.fetchRepleData()
-    // }, [])
-
     return (
         <>
-        {/* // <div className='reple_modal_wrap'> */}
             <div className="reple">
                 {repleInput && editFlag ? (
                     <form className='editinput'>
@@ -145,7 +143,6 @@ const RepleContent = (props) => {
                     </div>
                 )
             }
-        {/* </div> */}
         </>
     )
 }
