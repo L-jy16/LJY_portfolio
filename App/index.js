@@ -3,8 +3,8 @@ const path = require("path");
 const mongoose = require("mongoose");
 
 const app = express();
-const port = process.env.PORT || 3000;
-const config = require("./server/config/key.js");
+const port = 3000;
+
 
 app.use(express.static(path.join(__dirname, "./client/build")));
 app.use("/image", express.static("./image"));
@@ -16,7 +16,7 @@ app.use("/api/reple", require("./server/router/reple.js"));
 
 app.listen(port, () => {
     mongoose
-        .connect(config.mongoURI)
+        .connect("mongodb+srv://leejiyoung492:rhqnr1159*@reple.13k0zkv.mongodb.net/?retryWrites=true&w=majority")
         .then(() => {
             console.log("listening  --> " + port);
             console.log("mongoose --> connecting");

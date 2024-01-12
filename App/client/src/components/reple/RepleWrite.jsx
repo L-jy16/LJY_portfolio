@@ -11,12 +11,13 @@ const RepleWrite = ({ position }) => {
 
     const submitHandler = (e) => {
         e.preventDefault();
+        let repleLength = reple.replace(/\s/g, '')
 
         if (!reple || !nickName || !password) {
             return alert("모두 채워주세요.");
         }
 
-        if (reple.length > 101) {
+        if (repleLength.length > 100) {
             return alert("댓글을 100글자 이내로 적어주세요.")
         }
 

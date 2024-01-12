@@ -133,6 +133,24 @@
         overflow-y: auto;
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+
+        &.left {
+            top: 0;
+            left: 0;
+            right: auto;
+            align-content: flex-start;
+            align-items: flex-start;
+        }
+
+        &.right {
+            top: 0;
+            right: 0;
+            left: auto;
+            text-align: right;
+            align-content: flex-end;
+            align-items: flex-end;
+        }
 
         &::-webkit-scrollbar {
             width: 5px;
@@ -146,18 +164,6 @@
 
         &::-webkit-scrollbar-track {
             background-color: none;
-        }
-
-
-        &.left {
-            top: 0;
-            left: 0;
-        }
-
-        &.right {
-            top: 0;
-            right: 0;
-            text-align: right;
         }
 
         // .reple_modal_wrap {
@@ -222,7 +228,7 @@
             }
 
             .editinput {
-                width: 72%;
+                width: 100%;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -564,6 +570,7 @@
                 background-color: #191310a8;
                 backdrop-filter: blur(5px);
                 border-radius: 10px;
+                padding: 2vw;
 
                 &::-webkit-scrollbar {
                     width: 5px;
@@ -587,6 +594,9 @@
                     right: 50%;
                     text-align: left;
                     transform: translateX(-50%);
+                    align-content: flex-start;
+                    align-items: flex-start;
+                    text-align: left;
                 }
 
                 .reple {
