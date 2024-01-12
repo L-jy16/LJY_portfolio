@@ -3,8 +3,8 @@ const path = require("path");
 const mongoose = require("mongoose");
 
 const app = express();
-const port = 3000;
-const config = require("./config/key.js");
+const port = process.env.PORT || 3000;
+const config = require("./server/config/key.js");
 
 app.use(express.static(path.join(__dirname, "./client/build")));
 app.use("/image", express.static("./image"));
