@@ -12,7 +12,8 @@ const RepleContent = (props) => {
     const [reple, setReple] = useState(props.reple.reple);  // 댓글 불러오기 및 수정
     const [password, setPassword] = useState(""); // 비번 입력
     const [showPasswordError, setShowPasswordError] = useState(false);
-    const [repleInput, setRepleInput] = useState(false); // 수정 => 
+    const [repleInput, setRepleInput] = useState(false); // 수정 
+    const editInputRef = useRef(null);
 
 
     const ref = useRef();
@@ -60,6 +61,7 @@ const RepleContent = (props) => {
                             console.log(err);
                             alert("댓글을 삭제하는데 실패하였습니다.");
                         })
+
                 }
             }
         } else {
@@ -90,16 +92,42 @@ const RepleContent = (props) => {
             })
     }
 
+    // 엔터키
+    const modalKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            // 엔터 키를 눌렀을 때 submitAction 호출
+            submitAction();
+        }
+    };
+
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            // 엔터 키를 눌렀을 때 원하는 동작 수행
+            modiHandler(e);
+        }
+    };
+
+
+    // 수정 버튼 클릭 후 비번까지 참일 때 입력창에 포커스 두기
+    useEffect(() => {
+        if (repleInput && editFlag && editInputRef.current) {
+            editInputRef.current.focus();
+        }
+    }, [repleInput, editFlag]);
+
     return (
         <>
             <div className="reple">
                 {repleInput && editFlag ? (
-                    <form className='editinput'>
+                    <form className='editinput' onKeyDown={handleKeyDown}>
                         <input
                             className='editText'
                             type="text"
                             value={reple}
                             onChange={(e) => { setReple(e.currentTarget.value) }}
+                            ref={editInputRef}
                         />
                         {/*  수정하기를 누르면 수정하기, 취소하기 버튼 안보이게 숨김 */}
                         <span className='edit' onClick={(e) => { modiHandler(e) }}>수정</span>
@@ -123,7 +151,7 @@ const RepleContent = (props) => {
 
             {
                 modalFlag && (
-                    <div className="modal">
+                    <div className="modal" onKeyDown={modalKeyDown}>
                         <div className="modal-content">
                             <span className="close" onClick={closeModal}>
                                 X

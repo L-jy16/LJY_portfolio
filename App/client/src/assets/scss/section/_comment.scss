@@ -433,8 +433,262 @@
 
 
 
+// @media (max-width: 800px) {
+//     .reple {
+//         .mobile_reple {
+//             display: inline-block;
+//             position: absolute;
+//             top: 0;
+//             right: 0;
+
+//             .Mbtn {
+//                 .comment_btn {
+//                     display: block;
+//                 }
+
+//                 .comment_close {
+//                     display: none;
+//                 }
+
+//                 &.active {
+//                     .comment_btn {
+//                         display: none;
+//                     }
+
+//                     .comment_close {
+//                         display: block;
+//                     }
+//                 }
+
+//                 button {
+//                     position: absolute;
+//                     top: 0;
+//                     right: 0;
+//                     padding: 1vw;
+//                     font-size: 4vw;
+//                     font-family: var(--mainEn-font);
+//                     color: var(--font-color);
+//                     font-weight: lighter;
+//                     text-transform: uppercase;
+//                     background-color: #00000000;
+//                     text-emphasis-style: filled;
+//                     cursor: pointer;
+//                     z-index: 100000;
+
+//                     &:hover {
+//                         text-decoration: underline;
+//                         text-underline-position: under;
+//                         text-decoration-thickness: 1px;
+//                         text-emphasis-style: open;
+//                     }
+//                 }
+//             }
+//         }
+
+//         .comment_wrap,
+//         .reple_list {
+//             display: none;
+//         }
+
+//         &.active {
+//             position: absolute;
+//             width: 100%;
+//             height: 100%;
+//             top: 0;
+//             left: 0;
+//             width: 100%;
+//             height: 100%;
+//             background-color: #00000028;
+
+//             .comment_wrap {
+//                 display: inline-block;
+//                 width: 70%;
+//                 // height: 50%;
+
+//                 &.left,
+//                 &.right {
+//                     top: 67%;
+//                     left: 50%;
+//                     right: 50%;
+//                     transform: translateX(-50%);
+//                 }
+
+//                 &:hover {
+//                     .comment {}
+
+//                     .comment_back {
+//                         transform: none;
+//                     }
+//                 }
+
+//                 .comment {
+//                     display: none;
+//                 }
+
+//                 .comment_back {
+//                     position: absolute;
+//                     transform: none;
+//                     background-color: #191310a8;
+//                     backdrop-filter: blur(5px);
+//                     border-radius: 10px;
+//                     width: 100%;
+
+//                     form {
+
+//                         fieldset {
+
+//                             input {
+//                                 width: 70%;
+//                                 padding: 1vw;
+//                                 font-size: 2vw;
+//                                 font-size: 2vw;
+//                             }
+
+//                             button {
+//                                 margin-top: 2vw;
+//                                 background-color: var(--font-color);
+//                                 font-size: 2vw;
+//                                 padding: 1vw 2vw;
+
+//                                 &:hover {
+//                                     background-color: var(--white);
+//                                     color: var(--font-color);
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+
+//             }
+
+//             .reple_list {
+//                 display: flex;
+//                 position: absolute;
+//                 width: 70%;
+//                 height: 50%;
+//                 border: 1px solid #DC5B37;
+//                 background-color: #191310a8;
+//                 backdrop-filter: blur(5px);
+//                 border-radius: 10px;
+//                 padding: 2vw;
+
+
+//                 &::-webkit-scrollbar {
+//                     width: 5px;
+//                 }
+
+//                 &::-webkit-scrollbar-thumb {
+//                     height: 30px;
+//                     background: #DC5B37;
+//                     border-radius: 50px;
+//                 }
+
+//                 &::-webkit-scrollbar-track {
+//                     background-color: none;
+//                     background: none;
+//                 }
+
+//                 &.left,
+//                 &.right {
+//                     top: 15%;
+//                     left: 50%;
+//                     right: 50%;
+//                     text-align: left;
+//                     transform: translateX(-50%);
+//                     align-content: flex-start;
+//                     align-items: flex-start;
+//                     text-align: left;
+//                 }
+
+//                 .reple {
+//                     min-width: 50%;
+//                     max-width: 80%;
+//                     font-size: 2.2vw;
+
+//                     .reple_info {}
+
+//                     .user_info {
+//                         font-size: 1.8vw;
+
+//                         span {}
+
+//                         em {}
+
+//                         .modi {
+//                             font-size: 1.8vw;
+//                         }
+
+//                         .del {
+//                             font-size: 1.8vw;
+//                         }
+//                     }
+
+//                     .editinput {
+//                         width: 100%;
+
+//                         .editText {
+//                             font-size: 2vw;
+//                         }
+
+//                         .edit {
+//                             padding: 0 2vw;
+//                             font-size: 2vw;
+//                         }
+
+//                         .editdelete {
+//                             font-size: 2vw;
+//                         }
+//                     }
+//                 }
+//             }
+
+//             .modal {
+//                 width: 100%;
+//                 height: 100%;
+
+//                 .modal-content {
+//                     top: 30%;
+//                     width: 80%;
+//                     padding: 3vw;
+
+//                     .close {}
+
+//                     h2 {
+//                         font-size: 3vw;
+//                         margin-bottom: 2vw;
+//                     }
+
+//                     .password_input {
+//                         input {
+//                             font-size: 2vw;
+//                         }
+
+//                         button {
+//                             font-size: 2.5vw;
+//                         }
+//                     }
+//                 }
+//             }
+
+//         }
+//     }
+// }
+
 @media (max-width: 800px) {
     .reple {
+
+        @keyframes unfoldBook {
+            0% {
+                transform: scaleY(0);
+            }
+
+            100% {
+                transform: scaleY(1);
+            }
+        }
+
+
+
         .mobile_reple {
             display: inline-block;
             position: absolute;
@@ -491,184 +745,195 @@
         }
 
         &.active {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #00000028;
 
-            .comment_wrap {
-                display: inline-block;
-                width: 70%;
-                // height: 50%;
+            animation: unfoldBook 0.5s ease-in-out;
 
-                &.left,
-                &.right {
-                    top: 67%;
-                    left: 50%;
-                    right: 50%;
-                    transform: translateX(-50%);
-                }
+            .comment_wrap,
+            .reple_list {
+                display: none;
+            }
 
-                &:hover {
-                    .comment {}
+            &.active {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #00000028;
+
+                .comment_wrap {
+                    display: inline-block;
+                    width: 70%;
+                    // height: 50%;
+
+                    &.left,
+                    &.right {
+                        top: 67%;
+                        left: 50%;
+                        right: 50%;
+                        transform: translateX(-50%);
+                    }
+
+                    &:hover {
+                        .comment {}
+
+                        .comment_back {
+                            transform: none;
+                        }
+                    }
+
+                    .comment {
+                        display: none;
+                    }
 
                     .comment_back {
+                        position: absolute;
                         transform: none;
-                    }
-                }
+                        background-color: #191310a8;
+                        backdrop-filter: blur(5px);
+                        border-radius: 10px;
+                        width: 100%;
 
-                .comment {
-                    display: none;
-                }
+                        form {
 
-                .comment_back {
-                    position: absolute;
-                    transform: none;
-                    background-color: #191310a8;
-                    backdrop-filter: blur(5px);
-                    border-radius: 10px;
-                    width: 100%;
+                            fieldset {
 
-                    form {
+                                input {
+                                    width: 70%;
+                                    padding: 1vw;
+                                    font-size: 2vw;
+                                    font-size: 2vw;
+                                }
 
-                        fieldset {
+                                button {
+                                    margin-top: 2vw;
+                                    background-color: var(--font-color);
+                                    font-size: 2vw;
+                                    padding: 1vw 2vw;
 
-                            input {
-                                width: 70%;
-                                padding: 1vw;
-                                font-size: 2vw;
-                                font-size: 2vw;
-                            }
-
-                            button {
-                                margin-top: 2vw;
-                                background-color: var(--font-color);
-                                font-size: 2vw;
-                                padding: 1vw 2vw;
-
-                                &:hover {
-                                    background-color: var(--white);
-                                    color: var(--font-color);
+                                    &:hover {
+                                        background-color: var(--white);
+                                        color: var(--font-color);
+                                    }
                                 }
                             }
                         }
                     }
+
                 }
 
-            }
+                .reple_list {
+                    display: flex;
+                    position: absolute;
+                    width: 70%;
+                    height: 50%;
+                    border: 1px solid #DC5B37;
+                    background-color: #191310a8;
+                    backdrop-filter: blur(5px);
+                    border-radius: 10px;
+                    padding: 2vw;
 
-            .reple_list {
-                display: flex;
-                position: absolute;
-                width: 70%;
-                height: 50%;
-                border: 1px solid #DC5B37;
-                background-color: #191310a8;
-                backdrop-filter: blur(5px);
-                border-radius: 10px;
-                padding: 2vw;
 
-                &::-webkit-scrollbar {
-                    width: 5px;
-                }
+                    &::-webkit-scrollbar {
+                        width: 5px;
+                    }
 
-                &::-webkit-scrollbar-thumb {
-                    height: 30px;
-                    background: #DC5B37;
-                    border-radius: 50px;
-                }
+                    &::-webkit-scrollbar-thumb {
+                        height: 30px;
+                        background: #DC5B37;
+                        border-radius: 50px;
+                    }
 
-                &::-webkit-scrollbar-track {
-                    background-color: none;
-                    background: none;
-                }
+                    &::-webkit-scrollbar-track {
+                        background-color: none;
+                        background: none;
+                    }
 
-                &.left,
-                &.right {
-                    top: 15%;
-                    left: 50%;
-                    right: 50%;
-                    text-align: left;
-                    transform: translateX(-50%);
-                    align-content: flex-start;
-                    align-items: flex-start;
-                    text-align: left;
-                }
+                    &.left,
+                    &.right {
+                        top: 15%;
+                        left: 50%;
+                        right: 50%;
+                        text-align: left;
+                        transform: translateX(-50%);
+                        align-content: flex-start;
+                        align-items: flex-start;
+                        text-align: left;
+                    }
 
-                .reple {
-                    min-width: 50%;
-                    max-width: 80%;
-                    font-size: 2.2vw;
+                    .reple {
+                        min-width: 50%;
+                        max-width: 80%;
+                        font-size: 2.2vw;
 
-                    .reple_info {}
+                        .reple_info {}
 
-                    .user_info {
-                        font-size: 1.8vw;
-
-                        span {}
-
-                        em {}
-
-                        .modi {
+                        .user_info {
                             font-size: 1.8vw;
+
+                            span {}
+
+                            em {}
+
+                            .modi {
+                                font-size: 1.8vw;
+                            }
+
+                            .del {
+                                font-size: 1.8vw;
+                            }
                         }
 
-                        .del {
-                            font-size: 1.8vw;
-                        }
-                    }
+                        .editinput {
+                            width: 100%;
 
-                    .editinput {
-                        width: 100%;
+                            .editText {
+                                font-size: 2vw;
+                            }
 
-                        .editText {
-                            font-size: 2vw;
-                        }
+                            .edit {
+                                padding: 0 2vw;
+                                font-size: 2vw;
+                            }
 
-                        .edit {
-                            padding: 0 2vw;
-                            font-size: 2vw;
-                        }
-
-                        .editdelete {
-                            font-size: 2vw;
-                        }
-                    }
-                }
-            }
-
-            .modal {
-                width: 100%;
-                height: 100%;
-
-                .modal-content {
-                    top: 30%;
-                    width: 80%;
-                    padding: 3vw;
-
-                    .close {}
-
-                    h2 {
-                        font-size: 3vw;
-                        margin-bottom: 2vw;
-                    }
-
-                    .password_input {
-                        input {
-                            font-size: 2vw;
-                        }
-
-                        button {
-                            font-size: 2.5vw;
+                            .editdelete {
+                                font-size: 2vw;
+                            }
                         }
                     }
                 }
-            }
 
+                .modal {
+                    width: 100%;
+                    height: 100%;
+
+                    .modal-content {
+                        top: 30%;
+                        width: 80%;
+                        padding: 3vw;
+
+                        .close {}
+
+                        h2 {
+                            font-size: 3vw;
+                            margin-bottom: 2vw;
+                        }
+
+                        .password_input {
+                            input {
+                                font-size: 2vw;
+                            }
+
+                            button {
+                                font-size: 2.5vw;
+                            }
+                        }
+                    }
+                }
+
+            }
         }
     }
 }

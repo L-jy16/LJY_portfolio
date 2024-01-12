@@ -10,16 +10,18 @@ const Mouse = () => {
     useEffect(() => {
 
         gsap.set(".work_img_wrap", { opacity: 0, x: "-100%" });
-        gsap.set(".work__title, .center_text, .comment, .desc, .work_back_button, .work_btn", { opacity: 0 });
+        gsap.set(".work__title, .mobile_reple, .center_text, .comment, .reple_list, .desc, .work_back_button, .work_btn", { opacity: 0 });
 
         setTimeout(() => {
             const tl = gsap.timeline();
 
 
             tl.to(".work_img_wrap", { opacity: 1, x: 0, duration: 0.41 })
+            tl.to(".mobile_reple", { opacity: 1, duration: 0.41 })
             tl.to(".work__title", { opacity: 1, duration: 0.41 })
             tl.to(".center_text", { opacity: 1, duration: 0.41 })
             tl.to(".desc", { opacity: 1, duration: 0.41 })
+            tl.to(".reple_list", { opacity: 1, duration: 0.41 })
             tl.to(".comment", { opacity: 1, duration: 0.41 })
             tl.to(".work_back_button", { opacity: 1, duration: 0.41 })
             tl.to(".work_btn", { opacity: 1, duration: 0.41 })

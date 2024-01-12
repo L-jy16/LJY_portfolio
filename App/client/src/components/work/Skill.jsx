@@ -10,7 +10,7 @@ const Skill = () => {
     useEffect(() => {
 
         gsap.set(".work_img_wrap", { opacity: 0, y: "100%" });
-        gsap.set(".work__title, .center_text, .circle_wrap, .desc, .work_back_button, .comment_link, .s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10, .s11", { opacity: 0 });
+        gsap.set(".work__title, .center_text, .reple_list, .comment, .desc, .work_back_button, .comment_link, .s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10, .s11", { opacity: 0 });
 
         setTimeout(() => {
             const tl = gsap.timeline();
@@ -20,7 +20,8 @@ const Skill = () => {
             tl.to(".work__title", { opacity: 1, duration: 0.41 })
             tl.to(".center_text", { opacity: 1, duration: 0.41 })
             tl.to(".skill", { opacity: 1, duration: 0.41 })
-            tl.to(".circle_wrap", { opacity: 1, duration: 0.41 })
+            tl.to(".reple_list", { opacity: 1, duration: 0.41 })
+            tl.to(".comment", { opacity: 1, duration: 0.41 })
             tl.to(".work_back_button", { opacity: 1, duration: 0.41 })
             tl.to(".comment_link", { opacity: 1, duration: 0.41 })
             tl.to(".s1", { opacity: 1, duration: 0.41 })
