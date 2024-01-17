@@ -1,9 +1,6 @@
-import React, { useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import { gsap } from "gsap";
-import RepleAreas from '../reple/RepleAreas';
+import React from 'react'
 
-const Search = () => {
+const Promptopia = () => {
     const navigate = useNavigate();
 
     // 화면 전환 효과
@@ -41,13 +38,13 @@ const Search = () => {
             {/* work__title */}
 
             <div className="work_center right">
-                <span className='center_text'>search <p>site</p></span>
-                <div className="work_img_wrap search">
+                <span className='center_text'>Promptopia <p>site</p></span>
+                <div className="work_img_wrap">
                 </div>
                 <div className="desc">
                     <span>
-                        JAVASCRIPT를 활용하여 검색 게임 사이트를 만들었습니다.
-                        메인 페이지는 3D 효과를 이용하여 독창적인 분위기를 연출하였으며, 여러가지 메소드를 사용하여 여러 형태로 검색할 수 있도록 기능을 구현하였습니다.
+                        Next.js를 활용하여 프롬프트를 공유하는 사이트를 만들었습니다.
+                        검색 기능과 구글 연동 로그인 등을 구현하였으며 Tailwind.css를 활용하여 디자인을 하였습니다.
                     </span>
 
                 </div>
@@ -61,8 +58,8 @@ const Search = () => {
                     </Link>
                 </div>
                 <div className="work_btn">
-                    <Link to="/">view</Link>
-                    <Link to="/">code</Link>
+                    <Link to="https://next-project-promptopia-seven.vercel.app/">view</Link>
+                    <Link to="https://github.com/L-jy16/next_project_promptopia">code</Link>
                 </div>
             </div>
             {/* work_footer */}
@@ -73,4 +70,4 @@ const Search = () => {
     )
 }
 
-export default Search
+export default Promptopia
